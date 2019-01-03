@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //UI
+    implementation rootProject.ext.dependencies["bufferKinfe"]
+    implementation rootProject.ext.dependencies["waveLoading"]
+    //rxjava2
+    implementation rootProject.ext.dependencies["rxJava2"]
+    implementation rootProject.ext.dependencies["rxAndroid"]
+//    //androidx
+//    implementation rootProject.ext.dependencies["libraryCompat"]
+//    implementation rootProject.ext.dependencies["constraintLayout"]
+//    implementation rootProject.ext.dependencies["marterialDesign"]
+
+    //support
+    api(rootProject.ext.dependencies["support-v4"]) {
+        exclude module: 'support-annotations'
+    }
+    api(rootProject.ext.dependencies["appcompat-v7"]) {
+        exclude module: 'support-annotations'
+    }
+    api rootProject.ext.dependencies["design"]
+    api(rootProject.ext.dependencies["recyclerview-v7"]) {
+        exclude module: 'support-annotations'
+    }
+    api rootProject.ext.dependencies["annotations"]
+    api rootProject.ext.dependencies["constraint-layout"]
+}

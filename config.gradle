@@ -1,0 +1,123 @@
+ext {
+
+    android = [
+            compileSdkVersion       : 28,
+            buildToolsVersion       : "28.0.3",
+            minSdkVersion           : 15,
+            targetSdkVersion        : 28,
+            versionCode             : 1,
+            versionName             : "v1.0",
+    ]
+
+    version = [
+            androidSupportSdkVersion: "28.0.0",
+
+            constraintLayout        : "1.1.3",
+
+            //androidx
+            LibraryCompatVersion   : "1.0.1",
+            ConstraintLayoutVersion: "1.1.2",
+            MarterialDesignVersion : "1.0.0-alpha1",
+
+            //db
+            LitepalVersion         : "3.0.0",
+
+            //network
+            RetrofitVersion        : "2.4.0",
+
+            //rxJava2
+            Rxjava2Version : "2.2.2",
+            RxAndroidVersion : "2.1.0",
+            RxRelayVersion : "2.1.0",
+
+            //dagger2
+            Dagger2Version           : "2.18",
+            BufferKinfeVersion          : "9.0.0-rc1",
+
+            //leakcanary
+            LeakCanaryVersion : "1.6.2",
+
+            //ui
+            BaseAdapterVersion     : "2.9.43-alpha1",
+            SmartrefreshVersion    : "1.1.0-alpha-14",
+            AgentWebVersion         : "4.0.2",
+            Gilde                   : "4.8.0",
+            FlowLayout              : "1.1.2",
+            BannerVersion : '1.4.10',
+            CircleImageVersion : '2.2.0',
+            VerticalTabLayoutVersion : '1.2.5',
+            YViewPagerDemoVersion : '0.4',
+            WaveLoadingVersion : '0.3.5',
+            TwinklingRefreshLayoutVersion : '1.0.7',
+            MultiWaveHeaderVersion : '1.0.0-alpha-1',
+
+            //test
+            JunitVersion           : "4.12",
+            RunnerVersion          : "1.1.0",
+            EspressoVersion        : "3.1.0"
+
+    ]
+
+    dependencies = [
+
+            //support
+            "appcompat-v7"             : "com.android.support:appcompat-v7:${version["androidSupportSdkVersion"]}",
+            "design"                   : "com.android.support:design:${version["androidSupportSdkVersion"]}",
+            "support-v4"               : "com.android.support:support-v4:${version["androidSupportSdkVersion"]}",
+            "cardview-v7"              : "com.android.support:cardview-v7:${version["androidSupportSdkVersion"]}",
+            "annotations"              : "com.android.support:support-annotations:${version["androidSupportSdkVersion"]}",
+            "recyclerview-v7"          : "com.android.support:recyclerview-v7:${version["androidSupportSdkVersion"]}",
+            "constraint-layout"        : "com.android.support.constraint:constraint-layout:${version["constraintLayout"]}",
+            //androidx
+            "libraryCompat"         : "androidx.appcompat:appcompat:${version.LibraryCompatVersion}",
+            "constraintLayout"      : "androidx.constraintlayout:constraintlayout:${version.ConstraintLayoutVersion}",
+            "marterialDesign"       : "com.google.android.material:material:${version.MarterialDesignVersion}",
+
+            //db
+            "litepal"               : "org.litepal.android:java:${version.LitepalVersion}",
+
+            //network
+            "retrofit"              : "com.squareup.retrofit2:retrofit:${version.RetrofitVersion}",
+            "retrofitGsonConvert"   : "com.squareup.retrofit2:converter-gson:${version.RetrofitVersion}",
+            "retrofitRxjava2Adapter": "com.squareup.retrofit2:adapter-rxjava2:${version.RetrofitVersion}",
+
+            //rxJava2
+            "rxJava2" : "io.reactivex.rxjava2:rxjava:${version.Rxjava2Version}",
+            "rxAndroid" : "io.reactivex.rxjava2:rxandroid:${version.RxAndroidVersion}",
+            "rxRelay" : "com.jakewharton.rxrelay2:rxrelay:${version.RxRelayVersion}",
+
+            //leakcanary
+            leakCanaryDebug : "com.squareup.leakcanary:leakcanary-android:${version.LeakCanaryVersion}",
+            leakCanaryRelease : "com.squareup.leakcanary:leakcanary-android-no-op:${version.LeakCanaryVersion}",
+            leakCanaryDebugSupport : "com.squareup.leakcanary:leakcanary-support-fragment:${version.LeakCanaryVersion}",
+
+            //ui
+            "baseAdapter"           : "com.github.CymChad:BaseRecyclerViewAdapterHelper:${version.BaseAdapterVersion}",
+            "smartrefresh"          : "com.scwang.smartrefresh:SmartRefreshLayout:${version.SmartrefreshVersion}",
+            "smartrefreshHeader" : "com.scwang.smartrefresh:SmartRefreshHeader:${version.SmartrefreshVersion}",
+            "agentWeb" : "com.just.agentweb:agentweb:${version.AgentWebVersion}",
+            "gilde" : "com.github.bumptech.glide:glide:${version.Gilde}",
+            "gildeCpmplier" : "com.github.bumptech.glide:compiler:${version.Gilde}",
+            "flowLayout" : "com.hyman:flowlayout-lib:${version.FlowLayout}",
+            "banner" : "com.youth.banner:banner:${version.BannerVersion}",
+            "circleImage" : "de.hdodenhof:circleimageview:${version.CircleImageVersion}",
+            "verticalTablayout" : "q.rorbin:VerticalTabLayout:${version.VerticalTabLayoutVersion}",
+            "waveLoading" : "me.itangqi.waveloadingview:library:${version.WaveLoadingVersion}",
+            "twinklingRefreshLayout" : "com.lcodecorex:tkrefreshlayout:${version.TwinklingRefreshLayoutVersion}",
+            "multiWaveHeader" : "com.scwang.wave:MultiWaveHeader:${version.MultiWaveHeaderVersion}",
+
+            //dagger2
+            "dagger2" : "com.google.dagger:dagger:${version.Dagger2Version}",
+            "dagger2Cpmplier" : "com.google.dagger:dagger-compiler:${version.Dagger2Version}",
+            "bufferKinfe" : "com.jakewharton:butterknife:${version.BufferKinfeVersion}",
+            "bufferKinfeCompiler" : "com.jakewharton:butterknife-compiler:${version.BufferKinfeVersion}",
+
+            //bugly
+            "bugly" : "com.tencent.bugly:crashreport:latest.release",
+
+            //test
+            "junit"                 : "junit:junit:${version.JunitVersion}",
+            "runner"                : "androidx.test:runner:${version.RunnerVersion}",
+            "espresso"              : "androidx.test.espresso:espresso-core:${version.EspressoVersion}"
+    ]
+}
