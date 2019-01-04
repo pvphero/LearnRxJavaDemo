@@ -5,6 +5,7 @@ import android.content.Context;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
+import com.vv.base.library.utils.SuperUtils;
 import com.vv.learn.rxjava.R;
 
 import org.litepal.LitePalApplication;
@@ -28,4 +29,9 @@ public class App extends LitePalApplication {
                 new ClassicsFooter(context).setDrawableSize(20))); //经典Footer
     }
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        SuperUtils.init(this);
+    }
 }
