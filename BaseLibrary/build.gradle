@@ -19,11 +19,14 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //UI
-    implementation rootProject.ext.dependencies["bufferKinfe"]
-    implementation rootProject.ext.dependencies["waveLoading"]
+    api(rootProject.ext.dependencies["butterknife"]) {
+        exclude module: 'support-annotations'
+        exclude module: 'support-compat'
+    }
+    api rootProject.ext.dependencies["waveLoading"]
     //rxjava2
-    implementation rootProject.ext.dependencies["rxJava2"]
-    implementation rootProject.ext.dependencies["rxAndroid"]
+    api rootProject.ext.dependencies["rxJava2"]
+    api rootProject.ext.dependencies["rxAndroid"]
 //    //androidx
 //    implementation rootProject.ext.dependencies["libraryCompat"]
 //    implementation rootProject.ext.dependencies["constraintLayout"]
@@ -42,4 +45,5 @@ dependencies {
     }
     api rootProject.ext.dependencies["annotations"]
     api rootProject.ext.dependencies["constraint-layout"]
+
 }

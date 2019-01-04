@@ -32,7 +32,7 @@ ext {
 
             //dagger2
             Dagger2Version           : "2.18",
-            BufferKinfeVersion          : "9.0.0-rc1",
+            butterknifeSdkVersion   : "8.8.1",
 
             //leakcanary
             LeakCanaryVersion : "1.6.2",
@@ -109,8 +109,9 @@ ext {
             //dagger2
             "dagger2" : "com.google.dagger:dagger:${version.Dagger2Version}",
             "dagger2Cpmplier" : "com.google.dagger:dagger-compiler:${version.Dagger2Version}",
-            "bufferKinfe" : "com.jakewharton:butterknife:${version.BufferKinfeVersion}",
-            "bufferKinfeCompiler" : "com.jakewharton:butterknife-compiler:${version.BufferKinfeVersion}",
+
+            "butterknife"              : "com.jakewharton:butterknife:${version["butterknifeSdkVersion"]}",
+            "butterknife-compiler"     : "com.jakewharton:butterknife-compiler:${version["butterknifeSdkVersion"]}",
 
             //bugly
             "bugly" : "com.tencent.bugly:crashreport:latest.release",
