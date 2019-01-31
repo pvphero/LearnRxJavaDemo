@@ -1,11 +1,9 @@
 package com.vv.learn.rxjava;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.view.MenuItem;
 
 import com.vv.base.library.mvp.activity.BaseActivity;
 import com.vv.base.library.mvp.fragment.BaseFragment;
@@ -30,18 +28,18 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        btnBtm.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.item_home:
-                        break;
-                    case R.id.item_hierarchy:
-                        break;
-                }
-                return false;
-            }
-        });
+//        btnBtm.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+//                switch (menuItem.getItemId()) {
+//                    case R.id.item_home:
+//                        break;
+//                    case R.id.item_hierarchy:
+//                        break;
+//                }
+//                return false;
+//            }
+//        });
     }
 
     @Override
